@@ -7,15 +7,19 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'crisis-list', component: CrisisListComponent },
-  { path: 'heroes-list', component: HeroesListComponent },
+  { path: 'about', title: 'About', component: AboutComponent },
+  { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
+  { path: 'heroes-list', title: 'Heroes', component: HeroesListComponent },
+  // {
+  //   path: 'items',
+  //   loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
+  // }
   {
     path: '',
     redirectTo: '/heroes-list',
     pathMatch: 'full',
   },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', title: 'Page not found', component: PageNotFoundComponent },
 ];
 
 export const routes: Routes = appRoutes;
