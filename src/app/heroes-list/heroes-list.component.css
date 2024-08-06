@@ -1,0 +1,22 @@
+.special {
+  background-color: red;
+  color: orange;
+  font-size: 30px;
+}
+
+.modified {
+  line-height: 1;
+  font-weight: 700;
+}
+
+.saveable {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap {
+  gap: 2rem;
+}

@@ -1,2 +1,18 @@
-<h3>HEROES</h3>
-<p>Get your heroes here</p>
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<div [ngClass]="currentClasses">
+  This div is initially saveable, unchanged, and special.
+</div>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
+
+<div [ngClass]="heroForm">
+  <label for="example-ngModel">[(ngModel)]:</label>
+  <input [(ngModel)]="currentItem.name" id="example-ngModel" />
+  <input
+    [ngModel]="currentItem.name"
+    (ngModelChange)="setUppercaseName($event)"
+    id="example-uppercase"
+  />
+</div>
