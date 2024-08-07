@@ -16,6 +16,8 @@ export class HeroAsyncMessageComponent {
     'You are my hero!',
     'You are the best hero!',
     'Will you be my hero?',
+    'i love you',
+    'please my bae',
   ];
   constructor() {
     this.message$ = this.getResendObservable();
