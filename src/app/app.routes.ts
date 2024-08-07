@@ -10,6 +10,7 @@ const appRoutes: Routes = [
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
   { path: 'heroes-list', title: 'Heroes', component: HeroesListComponent },
+  { path: 'heroes-a', title: 'Heroes', component: HeroesListComponent },
   // {
   //   path: 'items',
   //   loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)

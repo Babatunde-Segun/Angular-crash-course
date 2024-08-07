@@ -4,5 +4,7 @@
 
 <p>
   The hero's birthday is in
-  {{ birthday | date : "dd:yyyy" : "UTC +3" | uppercase }}
+  {{ birthday | date : "dd:yyyy" : "UTC +3" }}
 </p>
+
+<p>My name is Segun {{ Name | greet | uppercase }}</p>
