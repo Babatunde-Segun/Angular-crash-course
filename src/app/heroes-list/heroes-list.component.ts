@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './heroes-list.component.css',
 })
 export class HeroesListComponent {
+  hero: any;
   setUppercaseName($event: any) {
     throw new Error('Method not implemented.');
   }
