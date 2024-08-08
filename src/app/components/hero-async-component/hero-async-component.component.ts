@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
+
 import { Observable, interval } from 'rxjs';
 import { map, startWith, take } from 'rxjs/operators';
 @Component({
@@ -20,12 +21,12 @@ export class HeroAsyncMessageComponent {
     'please my bae',
   ];
   constructor() {
-    this.message$ = this.getResendObservable();
+    this.message$ = this.#getResendObservable();
   }
   resend() {
-    this.message$ = this.getResendObservable();
+    this.message$ = this.#getResendObservable();
   }
-  private getResendObservable() {
+  #getResendObservable() {
     return interval(1000).pipe(
       map((i) => `Message #${i + 1}: ${this.messages[i]}`),
       take(this.messages.length),

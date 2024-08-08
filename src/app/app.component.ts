@@ -29,6 +29,7 @@ import { HeroesListComponent } from './heroes-list/heroes-list.component';
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {
+    console.log('Appcomponent ngOnInit');
     throw new Error('Method not implemented.');
   }
 }
