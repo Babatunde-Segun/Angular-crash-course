@@ -10,7 +10,12 @@ const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
-  { path: 'heroes-list', title: 'Heroes', component: HeroesListComponent },
+  {
+    path: 'heroes-list',
+    title: 'Heroes',
+    loadChildren: () =>
+      import('./heroes-list/heroes.module').then((m) => m.HeroListModule),
+  },
   {
     path: 'heroes-async-message',
     title: 'Heroes-Asynce',
