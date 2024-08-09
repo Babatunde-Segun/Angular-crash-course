@@ -1,6 +1,7 @@
 import { NgClass, NgIf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-heroes-list',
@@ -24,7 +25,7 @@ export class HeroesListComponent {
   currentItem!: {
     name: string;
   };
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.activeClasses();
   }
 
