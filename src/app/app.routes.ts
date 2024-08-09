@@ -21,6 +21,17 @@ const appRoutes: Routes = [
   //   loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
   // }
   {
+    path: 'customers',
+    loadChildren: () =>
+      import('./customers/customers.module').then((m) => m.CustomersModule),
+  },
+
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./orders/orders.module').then((m) => m.OrdersModule),
+  },
+  {
     path: '',
     redirectTo: '/heroes-list',
     pathMatch: 'full',

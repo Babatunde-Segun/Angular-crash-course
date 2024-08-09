@@ -8,7 +8,9 @@ import { map, startWith, take } from 'rxjs/operators';
   selector: 'app-hero-async-message',
   template: ` <h2>Async Messages and AsyncPipe</h2>
     <p>{{ message$ | async }}</p>
-    <button type="button" (click)="resend()">Resend Messages</button>`,
+    <button class="btn" type="button" (click)="resend()">
+      Resend Messages
+    </button>`,
   imports: [AsyncPipe],
 })
 export class HeroAsyncMessageComponent {
@@ -27,7 +29,7 @@ export class HeroAsyncMessageComponent {
     this.message$ = this.#getResendObservable();
   }
   #getResendObservable() {
-    return interval(1000).pipe(
+    return interval(2000).pipe(
       map((i) => `Message #${i + 1}: ${this.messages[i]}`),
       take(this.messages.length),
       startWith('Waiting for messages...')
