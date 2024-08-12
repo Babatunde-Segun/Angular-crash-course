@@ -10,6 +10,7 @@ import { provideRouter } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
+import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 
 @Component({
   selector: 'app-root',
@@ -20,16 +21,14 @@ import { HeroesListComponent } from './heroes-list/heroes-list.component';
     RouterOutlet,
     HeaderComponent,
     TasksComponent,
-    ReactiveFormsModule,
+
     CrisisListComponent,
     HeroesListComponent,
+    CssStyleExampleComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {
-    console.log('Appcomponent ngOnInit');
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }

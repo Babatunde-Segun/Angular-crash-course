@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform, ViewEncapsulation } from '@angular/core';
 @Pipe({
   name: 'greet',
   standalone: true,
@@ -17,6 +17,7 @@ import { DatePipe, UpperCasePipe, PercentPipe } from '@angular/common';
   imports: [DatePipe, UpperCasePipe, PercentPipe, GreetPipe],
   templateUrl: './crisis-list.component.html',
   styleUrl: './crisis-list.component.css',
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class CrisisListComponent {
   birthday = new Date().toLocaleDateString();

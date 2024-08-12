@@ -5,6 +5,7 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HeroAsyncMessageComponent } from './components/hero-async-component/hero-async-component.component';
+import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
@@ -37,6 +38,11 @@ const appRoutes: Routes = [
     path: 'orders',
     loadChildren: () =>
       import('./components/orders/orders.module').then((m) => m.OrdersModule),
+  },
+  {
+    path: 'css-style-example',
+    title: 'Css styling Example',
+    component: CssStyleExampleComponent,
   },
   {
     path: '',
