@@ -1,0 +1,14 @@
+<form [formGroup]="myForm" (ngSubmit)="handleSubmit()">
+  <label>
+    Name
+    <input type="text" formControlName="name" formControlName="name" />
+  </label>
+  <label>
+    Email
+    <input type="email" formControlName="email" formControlName="email" />
+  </label>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
+<h2>Profile Form</h2>
+<p>Name: {{ myForm.value.name }}</p>
+<p>Email: {{ myForm.value.email }}</p>

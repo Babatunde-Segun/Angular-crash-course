@@ -8,12 +8,18 @@ import { HeroAsyncMessageComponent } from './components/hero-async-component/her
 import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 import { ImageComponent } from './components/image/image.component';
 import { FormComponent } from './components/form/form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
   { path: 'form', title: 'Form', component: FormComponent },
+  {
+    path: 'reactive-form',
+    title: 'Reactive-Form',
+    component: ReactiveFormComponent,
+  },
   { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
   {
     path: 'heroes-list',
