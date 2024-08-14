@@ -16,11 +16,6 @@ import {
 export class ReactiveFormComponent implements OnInit {
   myForm!: FormGroup;
 
-  // profileForm = new FormGroup({
-  //   name: new FormControl(''),
-  //   email: new FormControl(''),
-  // });
-
   ngOnInit(): void {
     this.myForm = new FormGroup({
       name: new FormControl('', [Validators.minLength(4), Validators.required]),
