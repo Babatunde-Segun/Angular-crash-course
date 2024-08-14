@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @Component({
   selector: 'app-root',
@@ -21,10 +22,10 @@ import { CssStyleExampleComponent } from './components/css-style-example/css-sty
     RouterOutlet,
     HeaderComponent,
     TasksComponent,
-
     CrisisListComponent,
     HeroesListComponent,
     CssStyleExampleComponent,
+    CommentsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
