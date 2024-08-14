@@ -7,11 +7,13 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HeroAsyncMessageComponent } from './components/hero-async-component/hero-async-component.component';
 import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 import { ImageComponent } from './components/image/image.component';
+import { FormComponent } from './components/form/form.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
+  { path: 'form', title: 'Form', component: FormComponent },
   { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
   {
     path: 'heroes-list',
