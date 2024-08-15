@@ -9,10 +9,12 @@ import { CssStyleExampleComponent } from './components/css-style-example/css-sty
 import { ImageComponent } from './components/image/image.component';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'about', title: 'About', component: AboutComponent },
+  { path: 'pipe', title: 'Pipe', component: PipeComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
   { path: 'form', title: 'Form', component: FormComponent },
   {

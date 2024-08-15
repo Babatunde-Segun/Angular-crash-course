@@ -7,10 +7,9 @@ import { CarsService } from '../../services/cars.service';
   standalone: true,
 })
 export class CommentsComponent {
-  carService = inject(CarsService);
   display: string;
 
-  constructor() {
+  constructor(private carService: CarsService) {
     this.display = this.carService.getCars().join(' ⭐️ ');
   }
 }
