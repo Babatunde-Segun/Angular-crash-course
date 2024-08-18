@@ -6,7 +6,7 @@ import { CommentsComponent } from '../comments/comments.component';
   template: `
     <div>
       <div style="display: flex; ">
-        <a routerLink="/heroes-list">Go Back</a>
+        <a href="/heroes-list">Go Back</a>
       </div>
       <h1>How I feel about Angular</h1>
       <article></article>
