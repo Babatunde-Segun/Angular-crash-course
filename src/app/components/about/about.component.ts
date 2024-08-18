@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommentsComponent } from '../comments/comments.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
   template: `
     <div>
       <div style="display: flex; ">
-        <a href="/heroes-list">Go Back</a>
+        <button routerLink="/heroes-list">Go Back</button>
       </div>
       <h1>How I feel about Angular</h1>
       <article></article>
@@ -20,7 +21,7 @@ import { CommentsComponent } from '../comments/comments.component';
     </div>
   `,
   standalone: true,
-  imports: [CommentsComponent],
+  imports: [CommentsComponent, RouterLink],
   styleUrl: './about.component.css',
 })
 export class AboutComponent {}
