@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <div>
       <div style="display: flex; ">
-        <button routerLink="/heroes-list">Go Back</button>
+        <a routerLink="/heroes-list">Go Back</a>
       </div>
       <h1>How I feel about Angular</h1>
       <article></article>
