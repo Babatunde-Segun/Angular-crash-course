@@ -4,22 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about',
-  template: `
-    <div>
-      <div style="display: flex; ">
-        <a routerLink="/heroes-list">Go Back</a>
-      </div>
-      <h1>How I feel about Angular</h1>
-      <article></article>
-      @defer(on viewport) {
-      <comments />
-      } @placeholder() {
-      <p>Future comments</p>
-      } @loading (minimum 2s) {
-      <p>Loading comments...</p>
-      }
-    </div>
-  `,
+  templateUrl: './about.component.html',
   standalone: true,
   imports: [CommentsComponent, RouterLink],
   styleUrl: './about.component.css',
