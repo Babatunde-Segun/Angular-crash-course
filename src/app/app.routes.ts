@@ -10,9 +10,11 @@ import { ImageComponent } from './components/image/image.component';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { UserEventComponent } from './components/user-event/user-event.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
+  { path: 'user-event', title: 'user-event', component: UserEventComponent },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'pipe', title: 'Pipe', component: PipeComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
