@@ -25,7 +25,6 @@ import { provideAnimations } from '@angular/platform-browser/animations';
   selector: 'app-root',
   standalone: true,
   imports: [
-    BrowserAnimationsModule,
     RouterLinkActive,
     RouterLink,
     RouterOutlet,
@@ -42,7 +41,3 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 export class AppComponent implements OnInit {
   ngOnInit(): void {}
 }
-
-bootstrapApplication(AppComponent, {
-  providers: [provideAnimations()],
-});
