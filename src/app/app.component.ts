@@ -1,4 +1,9 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import {
+  Component,
+  importProvidersFrom,
+  NgModule,
+  OnInit,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { TasksComponent } from './components/tasks/tasks.component';
@@ -12,11 +17,15 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    BrowserAnimationsModule,
     RouterLinkActive,
     RouterLink,
     RouterOutlet,
@@ -33,3 +42,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 export class AppComponent implements OnInit {
   ngOnInit(): void {}
 }
+
+bootstrapApplication(AppComponent, {
+  providers: [provideAnimations()],
+});

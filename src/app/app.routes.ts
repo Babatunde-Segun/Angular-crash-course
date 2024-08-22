@@ -11,10 +11,14 @@ import { FormComponent } from './components/form/form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { UserEventComponent } from './components/user-event/user-event.component';
+import { AnimationComponent } from './components/animation/animation.component';
+import { OpenCloseComponent } from './open-close/open-close.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'user-event', title: 'user-event', component: UserEventComponent },
+  { path: 'animation', title: 'animation', component: AnimationComponent },
+  { path: 'open-close', title: 'OpenClose', component: OpenCloseComponent },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'pipe', title: 'Pipe', component: PipeComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
