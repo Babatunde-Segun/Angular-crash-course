@@ -42,7 +42,7 @@ import {
   styleUrls: ['open-close.component.css'],
 })
 export class OpenCloseComponent {
-  @Input() logging = false;
+  @Input() logging = true;
   isOpen = true;
   toggle() {
     this.isOpen = !this.isOpen;

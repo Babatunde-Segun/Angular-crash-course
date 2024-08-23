@@ -1,18 +1,20 @@
-<p>Username: {{ username }}</p>
-<p>Preferred Framework:</p>
-<ul>
-  <li>
-    Static Image:
-    <img
-      [ngSrc]="picture"
-      alt="Angular logo"
-      width="132"
-      height="132"
-      priority
-    />
-  </li>
-  <li>
-    Dynamic Image:
-    <img [ngSrc]="logoUrl" [alt]="logoAlt" width="52" height="52" />
-  </li>
-</ul>
+<div [@flyInOut]>
+  <p>Username: {{ username }}</p>
+  <p>Preferred Framework:</p>
+  <ul>
+    <li>
+      Static Image:
+      <img
+        [ngSrc]="picture"
+        alt="Angular logo"
+        width="132"
+        height="132"
+        priority
+      />
+    </li>
+    <li>
+      Dynamic Image:
+      <img [ngSrc]="logoUrl" [alt]="logoAlt" width="52" height="52" />
+    </li>
+  </ul>
+</div>

@@ -1,3 +1,10 @@
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 import { NgOptimizedImage, provideImgixLoader } from '@angular/common';
 import { Component } from '@angular/core';
 
@@ -7,6 +14,18 @@ import { Component } from '@angular/core';
   imports: [NgOptimizedImage],
   templateUrl: './image.component.html',
   styleUrl: './image.component.css',
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)' }),
+        animate(1000),
+      ]),
+      transition(':leave', [
+        animate(700, style({ transform: 'translateX(100%)' })),
+      ]),
+    ]),
+  ],
   providers: [provideImgixLoader('https://images.pexels.com/photos/')],
 })
 export class ImageComponent {

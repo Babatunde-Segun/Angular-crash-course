@@ -3,6 +3,13 @@ import { AsyncPipe } from '@angular/common';
 
 import { Observable, interval } from 'rxjs';
 import { map, startWith, take } from 'rxjs/operators';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 @Component({
   standalone: true,
   selector: 'app-hero-async-message',
@@ -12,6 +19,18 @@ import { map, startWith, take } from 'rxjs/operators';
       Resend Messages
     </button>`,
   imports: [AsyncPipe],
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-100%)' }),
+        animate(100),
+      ]),
+      transition('* => void', [
+        animate(100, style({ transform: 'translateX(100%)' })),
+      ]),
+    ]),
+  ],
 })
 export class HeroAsyncMessageComponent {
   message$: Observable<string>;
