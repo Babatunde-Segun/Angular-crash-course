@@ -1,0 +1,6 @@
+<nav>
+  <button type="button" (click)="toggle()">Toggle Boolean/Close</button>
+</nav>
+<div [@openClose]="isOpen ? true : false">
+  <p>The box is now {{ isOpen ? "Open" : "Closed" }}!</p>
+</div>

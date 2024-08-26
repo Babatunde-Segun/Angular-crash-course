@@ -13,10 +13,16 @@ import { PipeComponent } from './components/pipe/pipe.component';
 import { UserEventComponent } from './components/user-event/user-event.component';
 import { AnimationComponent } from './components/animation/animation.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
+import { IncrementComponent } from './components/increment/increment.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'user-event', title: 'user-event', component: UserEventComponent },
+  {
+    path: 'increment-animation',
+    title: 'Increment-animation',
+    component: IncrementComponent,
+  },
   { path: 'animation', title: 'animation', component: AnimationComponent },
   { path: 'open-close', title: 'OpenClose', component: OpenCloseComponent },
   { path: 'about', title: 'About', component: AboutComponent },
