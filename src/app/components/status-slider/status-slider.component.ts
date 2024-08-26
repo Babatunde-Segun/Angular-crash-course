@@ -15,15 +15,25 @@ import {
   animations: [
     trigger('slideStatus', [
       state('inactive', style({ backgroundColor: 'blue', height: '100px' })),
-      state('active', style({ backgroundColor: '#754600', height: '100px' })),
+      state('active', style({ backgroundColor: '#754600', height: '*' })),
       transition('* => active', [
         animate(
           '4s',
           keyframes([
-            style({ color: 'white', backgroundColor: 'blue', offset: 0 }),
-            style({ backgroundColor: 'red', offset: 0.4 }),
-            style({ backgroundColor: 'black', offset: 0.7 }),
-            style({ backgroundColor: '#754600', offset: 1.0 }),
+            style({
+              color: 'white',
+              backgroundColor: 'blue',
+              offset: 0,
+              height: '50px',
+            }),
+            style({
+              backgroundColor: 'red',
+              offset: 0.4,
+              height: '200px',
+              opacity: '0.5',
+            }),
+            style({ backgroundColor: 'black', offset: 0.6 }),
+            style({ backgroundColor: '#754600', offset: 0.8, height: '20px' }),
           ])
         ),
       ]),
