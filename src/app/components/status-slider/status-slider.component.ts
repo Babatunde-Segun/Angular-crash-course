@@ -18,10 +18,11 @@ import {
       state('active', style({ backgroundColor: '#754600', height: '100px' })),
       transition('* => active', [
         animate(
-          '1s',
+          '4s',
           keyframes([
-            style({ backgroundColor: 'blue', offset: 0 }),
-            style({ backgroundColor: 'red', offset: 0.8 }),
+            style({ color: 'white', backgroundColor: 'blue', offset: 0 }),
+            style({ backgroundColor: 'red', offset: 0.4 }),
+            style({ backgroundColor: 'black', offset: 0.7 }),
             style({ backgroundColor: '#754600', offset: 1.0 }),
           ])
         ),
