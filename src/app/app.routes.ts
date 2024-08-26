@@ -14,6 +14,7 @@ import { UserEventComponent } from './components/user-event/user-event.component
 import { AnimationComponent } from './components/animation/animation.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { IncrementComponent } from './components/increment/increment.component';
+import { StatusSliderComponent } from './components/status-slider/status-slider.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
@@ -25,6 +26,11 @@ const appRoutes: Routes = [
   },
   { path: 'animation', title: 'animation', component: AnimationComponent },
   { path: 'open-close', title: 'OpenClose', component: OpenCloseComponent },
+  {
+    path: 'status-slider',
+    title: 'status-slider',
+    component: StatusSliderComponent,
+  },
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'pipe', title: 'Pipe', component: PipeComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
