@@ -17,10 +17,16 @@ import { IncrementComponent } from './components/increment/increment.component';
 import { StatusSliderComponent } from './components/status-slider/status-slider.component';
 import { StaggerComponent } from './components/stagger/stagger.component';
 import { SearchComponent } from './components/search/search.component';
+import { ReusableAnimationComponent } from './components/reusable-animation/reusable-animation.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'user-event', title: 'user-event', component: UserEventComponent },
+  {
+    path: 'reusable-animation',
+    title: 'reusable-animation',
+    component: ReusableAnimationComponent,
+  },
   {
     path: 'search-component',
     title: 'search-component',
