@@ -52,7 +52,12 @@ const appRoutes: Routes = [
   { path: 'about', title: 'About', component: AboutComponent },
   { path: 'pipe', title: 'Pipe', component: PipeComponent },
   { path: 'image', title: 'Image', component: ImageComponent },
-  { path: 'form', title: 'Form', component: FormComponent },
+  {
+    path: 'form',
+    title: 'Form',
+    component: FormComponent,
+    data: { animation: 'formcomponent' },
+  },
   {
     path: 'reactive-form',
     title: 'Reactive-Form',

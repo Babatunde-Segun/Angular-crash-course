@@ -1,10 +1,16 @@
 import {
   Component,
+  HostBinding,
   importProvidersFrom,
   NgModule,
   OnInit,
 } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import {
+  ChildrenOutletContexts,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -17,9 +23,13 @@ import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { CssStyleExampleComponent } from './components/css-style-example/css-style-example.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { slideInAnimation } from './animation';
 
 @Component({
   selector: 'app-root',
@@ -35,9 +45,21 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     CssStyleExampleComponent,
     CommentsComponent,
   ],
+  animations: [slideInAnimation],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
   ngOnInit(): void {}
+  @HostBinding('@.disabled')
+  public animationsDisabled = false;
+  constructor(private contexts: ChildrenOutletContexts) {}
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
+  }
+  toggleAnimations() {
+    this.animationsDisabled = !this.animationsDisabled;
+  }
 }
