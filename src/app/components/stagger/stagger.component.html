@@ -1,6 +1,6 @@
 <div class="container" [@pageAnimations]="isTrue">
   <ol class="hero">
-    <li class="hero-items" *ngFor="let item of items">
+    <li class="hero-items" *ngFor="let item of items; trackBy: trackByItems">
       <p>{{ item.name }} + {{ item.emoji }}</p>
     </li>
   </ol>
