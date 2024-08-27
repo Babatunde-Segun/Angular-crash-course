@@ -23,7 +23,7 @@ import { Component } from '@angular/core';
           stagger(100, [
             animate(
               '500ms cubic-bezier(0.35, 0, 0.25, 1)',
-              style({ opacity: 1, transform: 'translateY(.5px)' })
+              style({ opacity: 1, transform: 'none' })
             ),
           ]),
         ]),
@@ -33,16 +33,16 @@ import { Component } from '@angular/core';
 })
 export class StaggerComponent {
   isTrue: boolean = true;
-  items: { name: string; emoji: string }[] = [
-    { name: 'Item 1', emoji: '🍏' },
-    { name: 'Item 2', emoji: '🍎' },
-    { name: 'Item 3', emoji: '🍊' },
-    { name: 'Item 4', emoji: '🍇' },
-    { name: 'Item 5', emoji: '🍉' },
-    { name: 'Item 6', emoji: '🍌' },
-    { name: 'Item 7', emoji: '🍒' },
-    { name: 'Item 8', emoji: '🍍' },
-    { name: 'Item 9', emoji: '🥝' },
-    { name: 'Item 10', emoji: '🍓' },
+  items: { name: string; emoji: string; id: number }[] = [
+    { name: 'Item 1', emoji: '🍏', id: 1 },
+    { name: 'Item 2', emoji: '🍎', id: 2 },
+    { name: 'Item 3', emoji: '🍊', id: 3 },
+    { name: 'Item 4', emoji: '🍇', id: 4 },
+    { name: 'Item 5', emoji: '🍉', id: 5 },
+    { name: 'Item 6', emoji: '🍌', id: 6 },
+    { name: 'Item 7', emoji: '🍒', id: 7 },
+    { name: 'Item 8', emoji: '🍍', id: 8 },
+    { name: 'Item 9', emoji: '🥝', id: 9 },
+    { name: 'Item 10', emoji: '🍓', id: 10 },
   ];
 }
