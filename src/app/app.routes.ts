@@ -16,10 +16,16 @@ import { OpenCloseComponent } from './open-close/open-close.component';
 import { IncrementComponent } from './components/increment/increment.component';
 import { StatusSliderComponent } from './components/status-slider/status-slider.component';
 import { StaggerComponent } from './components/stagger/stagger.component';
+import { SearchComponent } from './components/search/search.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'user-event', title: 'user-event', component: UserEventComponent },
+  {
+    path: 'search-component',
+    title: 'search-component',
+    component: SearchComponent,
+  },
   {
     path: 'stagger-animation',
     title: 'stagger-animation',
