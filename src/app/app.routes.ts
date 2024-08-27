@@ -15,10 +15,16 @@ import { AnimationComponent } from './components/animation/animation.component';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { IncrementComponent } from './components/increment/increment.component';
 import { StatusSliderComponent } from './components/status-slider/status-slider.component';
+import { StaggerComponent } from './components/stagger/stagger.component';
 
 const appRoutes: Routes = [
   // { path: '', component: TasksComponent },
   { path: 'user-event', title: 'user-event', component: UserEventComponent },
+  {
+    path: 'stagger-animation',
+    title: 'stagger-animation',
+    component: StaggerComponent,
+  },
   {
     path: 'increment-animation',
     title: 'Increment-animation',

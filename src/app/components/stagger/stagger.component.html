@@ -1,0 +1,7 @@
+<div class="container" [@pageAnimations]="isTrue">
+  <ol class="hero">
+    <li class="hero-items" *ngFor="let item of items">
+      {{ item.name }} + {{ item.emoji }}
+    </li>
+  </ol>
+</div>

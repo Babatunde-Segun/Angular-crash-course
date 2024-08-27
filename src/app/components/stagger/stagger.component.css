@@ -1,0 +1,33 @@
+.container {
+  margin-top: 60px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1.2em;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  li {
+    font-size: 1em;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  li {
+    font-size: 0.9em;
+    padding: 6px;
+  }
+}
