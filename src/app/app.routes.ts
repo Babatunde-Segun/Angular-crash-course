@@ -26,44 +26,80 @@ const appRoutes: Routes = [
     path: 'reusable-animation',
     title: 'reusable-animation',
     component: ReusableAnimationComponent,
+    data: { animation: 'reusableAnimationPage' },
   },
   {
     path: 'search-component',
     title: 'search-component',
+    data: { animation: 'searchPage' },
     component: SearchComponent,
   },
   {
     path: 'stagger-animation',
     title: 'stagger-animation',
+    data: { animation: 'staggerPage' },
     component: StaggerComponent,
   },
   {
     path: 'increment-animation',
     title: 'Increment-animation',
+    data: { animation: 'incrementPage' },
     component: IncrementComponent,
   },
-  { path: 'animation', title: 'animation', component: AnimationComponent },
-  { path: 'open-close', title: 'OpenClose', component: OpenCloseComponent },
+  {
+    path: 'animation',
+    title: 'animation',
+    data: { animation: 'animationPage' },
+    component: AnimationComponent,
+  },
+  {
+    path: 'open-close',
+    title: 'OpenClose',
+    data: { animation: 'openClosePage' },
+    component: OpenCloseComponent,
+  },
   {
     path: 'status-slider',
     title: 'status-slider',
+    data: { animation: 'statusSliderPage' },
     component: StatusSliderComponent,
   },
-  { path: 'about', title: 'About', component: AboutComponent },
-  { path: 'pipe', title: 'Pipe', component: PipeComponent },
-  { path: 'image', title: 'Image', component: ImageComponent },
+  {
+    path: 'about',
+    title: 'About',
+    data: { animation: 'aboutPage' },
+    component: AboutComponent,
+  },
+  {
+    path: 'pipe',
+    title: 'Pipe',
+    data: { animation: 'pipePage' },
+    component: PipeComponent,
+  },
+  {
+    path: 'image',
+    title: 'Image',
+    data: { animation: 'imagePage' },
+    component: ImageComponent,
+  },
   {
     path: 'form',
     title: 'Form',
+    data: { animation: 'formPage' },
     component: FormComponent,
-    data: { animation: 'formcomponent' },
   },
   {
     path: 'reactive-form',
     title: 'Reactive-Form',
+    data: { animation: 'reactiveFormPage' },
     component: ReactiveFormComponent,
   },
-  { path: 'crisis-list', title: 'Crisis', component: CrisisListComponent },
+  {
+    path: 'crisis-list',
+    title: 'Crisis',
+    data: { animation: 'crisisListPage' },
+    component: CrisisListComponent,
+  },
   {
     path: 'heroes-list',
     title: 'Heroes',
@@ -73,6 +109,7 @@ const appRoutes: Routes = [
   {
     path: 'heroes-async-message',
     title: 'Heroes-Asynce',
+    data: { animation: '' },
     component: HeroAsyncMessageComponent,
   },
   // {
@@ -95,6 +132,7 @@ const appRoutes: Routes = [
   {
     path: 'css-style-example',
     title: 'Css styling Example',
+    data: { animation: 'cssStyleExamplePage' },
     component: CssStyleExampleComponent,
   },
   {
@@ -102,7 +140,12 @@ const appRoutes: Routes = [
     redirectTo: '/heroes-list',
     pathMatch: 'full',
   },
-  { path: '**', title: 'Page not found', component: PageNotFoundComponent },
+  {
+    path: '**',
+    title: 'Page not found',
+    data: { animation: 'nitFoundPage' },
+    component: PageNotFoundComponent,
+  },
 ];
 
 export const routes: Routes = appRoutes;
