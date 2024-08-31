@@ -42,14 +42,7 @@ export class StaggerComponent {
     { name: 'Item 2', emoji: '🍎', id: 2 },
     { name: 'Item 3', emoji: '🍊', id: 3 },
     { name: 'Item 4', emoji: '🍇', id: 4 },
-    { name: 'Item 5', emoji: '🍉', id: 5 },
-    { name: 'Item 6', emoji: '🍌', id: 6 },
-    { name: 'Item 7', emoji: '🍒', id: 7 },
-    { name: 'Item 8', emoji: '🍍', id: 8 },
-    { name: 'Item 9', emoji: '🥝', id: 9 },
-    { name: 'Item 10', emoji: '🍓', id: 10 },
   ];
-
   // TrackBy function to ensure proper tracking and animation of items
   trackByItems(index: number, item: any): number {
     return item.id;
